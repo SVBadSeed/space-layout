@@ -1,0 +1,134 @@
+@import "../vars";
+
+.services {
+  padding-bottom: 200px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box-list {
+    width: 620px;
+    margin-right: 80px;
+
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  &__list-title {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    margin-bottom: 25px;
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 36px;
+
+    &:before {
+      position: absolute;
+      top: 7px;
+      left: 0;
+
+      content: "";
+      width: 20px;
+      height: 20px;
+
+      border-radius: 50%;
+      background-color: $white;
+    }
+  }
+
+  &__description {
+    color: $gray;
+
+    font-size: 12px;
+  }
+
+  &__buttons {
+    width: 500px;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__button--first {
+    position: relative;
+    margin-bottom: 50px;
+
+    &:before {
+      position: absolute;
+      bottom: 41px;
+      right: 0;
+
+      width: 192px;
+      height: 150px;
+
+      content: '';
+      background-image: url("../../images/photo.png");
+    }
+  }
+}
+
+@media (max-width: 895px) {
+  .services {
+    padding-bottom: 100px;
+
+    &__inner {
+      display: block;
+    }
+
+    &__box-list {
+      width: 100%;
+      margin-bottom: 170px;
+      margin-right: 0;
+    }
+
+    &__buttons {
+      margin: 0 auto;
+    }
+  }
+}
+
+
+@media (max-width: 550px) {
+  .services {
+    &__buttons {
+      width: 100%;
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+  .services {
+    &__list-item {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .services {
+    &__button {
+      font-size: 12px !important;
+    }
+
+    &__button--first {
+
+      &:before {
+        bottom: 34px;
+      }
+    }
+
+
+    &__title {
+      font-size: 22px;
+    }
+  }
+
+}

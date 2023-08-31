@@ -1,0 +1,54 @@
+@import "../vars";
+
+.to-book {
+  background-image: url("../../images/tobook-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  min-height: 100vh;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    width: 165px;
+
+    font-size: 14px;
+    line-height: 17px;
+
+    margin: 100px 52px 0 auto;
+  }
+
+  &__text + &__text {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .to-book {
+    background-position: center;
+
+    &__inner {
+      display: block;
+    }
+
+    &__text {
+      width: 100%;
+      margin: 0 0 30px 0;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .to-book {
+    background-position: center left !important;
+
+    &__text {
+      font-size: 13px;
+    }
+  }
+}

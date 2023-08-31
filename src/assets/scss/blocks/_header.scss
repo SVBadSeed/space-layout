@@ -1,0 +1,291 @@
+@import "../vars";
+
+.header {
+  background-image: url("../../images/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 100vh;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 75px 0 30px 0;
+  }
+
+  &__content {
+    max-width: 600px;
+  }
+
+  &__title {
+    font-family: 'spaceagecyrillic', sans-serif;
+
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+
+    margin-bottom: 20px;
+
+    span {
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+      font-size: 110px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 42px;
+
+    font-size: 24px;
+    line-height: 29px;
+
+
+    margin-bottom: 50px;
+  }
+
+  &__button {
+    border: 1px solid $white;
+
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 400;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    padding: 15px 10px;
+    width: 100%;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 52px;
+
+    margin-top: 40px;
+    margin-bottom: 5%;
+  }
+
+  &__description-text {
+    width: 165px;
+    font-size: 14px;
+    line-height: 17px;
+
+  }
+}
+
+.menu__list {
+  display: flex;
+
+  gap: 30px;
+}
+
+.menu__link {
+  text-transform: uppercase;
+
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+
+  transition: color .5s;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+.menu-button {
+  cursor: pointer;
+
+  display: none;
+  position: relative;
+
+  z-index: 20;
+
+  height: 30px;
+  width: 40px;
+
+  span {
+    display: block;
+    height: 2px;
+    background-color: $white;
+
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 40px;
+      height: 2px;
+
+      background-color: $white;
+
+      position: absolute;
+      left: 0;
+    }
+
+    &:before {
+      top: -10px;
+    }
+
+    &:after {
+      top: 10px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .login {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 895px) {
+  .header {
+    background-position: center right;
+
+    &__content {
+      margin: 0 auto;
+    }
+
+    &__description {
+      justify-content: center;
+    }
+
+    &__top {
+      padding-top: 30px;
+    }
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .menu__list {
+    transform: translateY(-150%);
+    transition: all .5s;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 90px 0 30px 0;
+    display: block;
+
+    text-align: center;
+
+    width: 100%;
+
+    background-color: #010203;
+  }
+
+  .menu__list.active {
+    transform: translateY(0);
+  }
+
+  .menu__item {
+    padding: 15px 0;
+  }
+
+  .menu__link {
+    display: block;
+  }
+}
+
+@media (max-width: 620px) {
+  .header {
+
+    &__title {
+      font-size: 34px;
+      line-height: 30px;
+
+      span {
+        font-size: 60px;
+        line-height: 60px;
+      }
+    }
+
+    &__description {
+      display: block;
+    }
+
+    &__description-text {
+      text-align: center;
+
+      width: 100%;
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__text {
+      justify-content: center;
+      gap: 0;
+
+      font-size: 18px;
+
+      margin-bottom: 40px;
+
+      p {
+        padding: 0 10px;
+      }
+    }
+
+    &__content {
+      text-align: center;
+    }
+
+    &__button {
+      font-size: 18px;
+      line-height: 24px;
+
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .header {
+
+    &__title {
+      font-size: 28px !important;
+
+      span {
+        font-size: 32px !important;
+        line-height: 28px !important;
+      }
+    }
+
+    &__button {
+      width: 100% !important;
+
+      font-size: 16px !important;
+    }
+
+    &__top {
+      flex-wrap: wrap;
+    }
+  }
+
+  .menu {
+    order: -1;
+  }
+
+  .menu__list {
+    padding-top: 120px;
+  }
+}

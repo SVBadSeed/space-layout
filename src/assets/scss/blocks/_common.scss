@@ -1,0 +1,169 @@
+@import "../vars";
+
+@font-face {
+  font-family: 'sf-pro-display';
+  src: url('../../../fonts/SF-Pro-Display-Regular.woff2') format('woff2'),
+  url('../../../fonts/SF-Pro-Display-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'sf-pro-display';
+  src: url('../../../fonts/SF-Pro-Display-Bold.woff2') format('woff2'),
+  url('../../../fonts/SF-Pro-Display-Bold.woff') format('woff');
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'spaceagecyrillic';
+  src: url('../../../fonts/spaceagecyrillic-regular.woff2') format('woff2'),
+  url('../../../fonts/spaceagecyrillic-regular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'sf-pro-display', sans-serif;
+
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+
+  color: $white;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+button {
+  background: transparent;
+  border: none;
+
+  color: inherit;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+
+  padding: 0 10px;
+}
+
+.phone {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+
+  margin-left: auto;
+}
+
+.login {
+  margin: 0 134px 0 22px;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 400;
+
+  padding: 100px 0;
+
+  text-transform: uppercase;
+
+  font-family: 'spaceagecyrillic', sans-serif;
+}
+
+.button {
+  border: 1px solid $white;
+  background: rgba(196, 196, 196, 0.00);
+
+  text-transform: uppercase;
+
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+
+  padding: 20px 44px 19px 45px;
+
+  font-family: 'sf-pro-display', sans-serif;
+}
+
+.info {
+  background-image: url("../../images/specialoffer-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  padding-bottom: 100px;
+}
+
+@media (max-width: 895px) {
+  .phone,
+  .login {
+    position: relative;
+    z-index: 20;
+  }
+
+  .info {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .title {
+    font-size: 38px;
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+    line-height: 28px;
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .phone {
+    width: 100%;
+    margin-right: auto;
+    margin-top: 20px;
+
+    text-align: center;
+  }
+
+  .login {
+    order: -1;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}

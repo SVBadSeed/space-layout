@@ -1,0 +1,112 @@
+@import "../vars";
+
+
+.how-to {
+  background-image: url("../../images/howto-bg.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-bottom: 100px;
+
+
+  &__box {
+    text-align: center;
+
+    g {
+      transition: all .5s;
+
+      circle {
+        transition: all .5s;
+      }
+
+      text {
+        transition: all .5s;
+
+        font-size: 18px;
+      }
+
+      foreignObject {
+        transition: all .5s;
+
+        text-align: left;
+      }
+    }
+
+    g:hover {
+
+      circle {
+        transition: all .5s;
+        cursor: pointer;
+
+        r: 20px;
+        fill: $blue
+      }
+
+      text {
+        transition: all .5s;
+        cursor: pointer;
+
+        fill: $blue;
+
+        font-size: 36px;
+      }
+
+      foreignObject {
+        transition: all .5s;
+        cursor: pointer;
+
+        color: $blue;
+
+        font-size: 22px;
+      }
+    }
+  }
+
+  &__box-list {
+    display: none;
+  }
+}
+
+@media (max-width: 895px) {
+  .how-to {
+
+    &__box {
+      display: none;
+    }
+
+    &__box-list {
+      display: block;
+    }
+
+    &__box-item {
+      position: relative;
+
+      padding-bottom: 30px;
+      padding-left: 20px;
+      margin-left: 20px;
+
+      border-left: 1px solid $white;
+
+      text-align: left;
+
+      &:before {
+        position: absolute;
+        left: -10px;
+        top: 0;
+
+        background-color: $white;
+
+        content: "";
+        width: 20px;
+        height: 20px;
+
+        border-radius: 50%;
+      }
+    }
+
+    &__box-item:last-child {
+      border-left: none;
+    }
+  }
+}
